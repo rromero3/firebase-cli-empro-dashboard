@@ -1,0 +1,36 @@
+<h1>
+  {{title}} asdasda
+</h1>
+
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Firebase Crud</a>
+    </div>
+    <div *ngIf="isLoggedIn" class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <h3> {{ afService.displayName}} | {{afService.email}} </h3>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a (click)="logout()">Logout</a></li>
+      </ul>
+    </div>
+
+    <div *ngIf="!isLoggedIn" class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a (click)="login()">Login</a></li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+<ul>
+  <li class="text" *ngFor="let item of items | async">
+     {{item.other}} | {{item.name}}
+  </li>
+</ul>
+
+
+<div class="app-content">
+ <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,15 @@
+{
+	"items" :
+	 {
+	"value1" : {
+	"name": "item 1",
+	"other" : 1
+	},
+	"value2" : {
+	"name" : "item 2",
+	"other" : 2
+	}
+
+	}
+
+}
